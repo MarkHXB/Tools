@@ -16,15 +16,6 @@ class File():
             return True
         return False
 
-    def is_created():
-        pass
-
-    def is_modified():
-        pass
-
-    def is_deleted():
-        pass
-
 
 class Observer():
     def __init__(self, path, delay, log_file):
@@ -103,7 +94,7 @@ class Observer():
             if deleted:
                 for file in deleted:
                     changes.append(f'[ DELETED ] {file}')
-            
+
             if changes:
                 with open(rf'{self.log_file}', 'a') as f:
                     for line in changes:
